@@ -1,0 +1,1569 @@
+/*serve para mudar de TODO o site*/
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+
+    background-color: #faade8;
+
+}
+
+/*******************************************/
+/*                 HEADER                  */
+/*******************************************/
+
+img {
+    padding: 20px;
+}
+
+.suporte {
+    display: flex;
+    /*Define o layout como flexivel, permitindo que os elementos filhos sejam dispostos em uma linha ou coluna.*/
+    align-items: center;
+    /*Alinha os elementos filhos verticalmente no centro.*/
+    height: 200px;
+    /*Define a altura do elemento como 200pixels.*/
+}
+
+.suporteCliente {
+    display: flex;
+    align-items: center;
+    /*Alinha os elementos filhos verticalmente*/
+    color: rgb(0, 0, 0);
+    /*Define a cor do texto como branco*/
+    margin-right: 10px;
+    /*Adiciona um espaçamento de 10 pixels à direita*/
+    gap: 13rem;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    /*Alinha os elementos filhos horizontalmente no final(direita).*/
+    align-items: center;
+    padding-left: 300px;
+    /*Adiciona um espaçamento de 300px à esquerda do elemento*/
+    padding-left: 29.7rem;
+}
+
+.alinhar {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 60px;
+}
+
+
+/*******************************************/
+/*                 HEADER                  */
+/*******************************************/
+
+.menuh {
+    list-style: none;
+    /*Remover a formatação de lista*/
+    padding: 20px 0px 20px 0px;
+    /*Adiciona um espaçamento de 20px em cima e em baixo e 0px a esquerda e a direita*/
+    background-color: #ea7fbf;
+    display: flex;
+    align-items: center;
+    gap: 7rem;
+}
+
+.menuh li {
+    display: inline;
+    /*Faz com que os elementos li sejam exibidos lado a lado*/
+}
+
+.menuh li a {
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    display: flex;
+    display: inline;
+    font-size: 1.3rem;
+    /*Define o tamanho da fonte como 1.3 VEZES o tamanho padrão*/
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    /*Definir o peso da fonte como 600*/
+    text-decoration: none;
+    /*Arranca o tracinho do link*/
+    text-transform: uppercase;
+    /**/
+    position: relative;
+    /*Define a posição do elemento como relativo*/
+
+}
+
+.menuh a::after {
+    /*Definir um estilo para o pseudo-elemento ::after dos links (a) dentro de elementos com a classe menuh*/
+    content: '';
+    /*Define o conteudo do pseudo-elemento como vazio*/
+    width: 5.5rem;
+    height: 1px;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    /*Define a posição do pseudo-elemento com absoluta*/
+    bottom: -3px;
+    /*Definir a posição do pseudo-elemento como 3 pixels a esquerda do elemento pai*/
+    left: 50%;
+    /*Definir a posição do pseudo elemento como 50% a esquerda do elemento pai*/
+    transform: translate(-50%, 50%);
+    /*Define a transformação do pseudo-elemento como uma translação de -50% para cima*/
+    opacity: 0;
+    /*Definindo a opacidade do pseudo-elemento como 0, o que o torna invisível*/
+    transition: all 0.3s ease;
+    /*Define a transição do pseudo-elemento como uma animação de 0.3 seg com efeito ease*/
+
+}
+
+.menuh a:hover::after {
+    opacity: 1;
+    /*Definindo a opacidade do pseudo-elemento como 1, o que o torna visível*/
+
+}
+
+.menuh a:hover {
+    color: #cc099e
+}
+
+/*******************************************/
+/*          INICIA-SE O BANNER             */
+/*******************************************/
+
+.banner {
+    background-image: url('tudojunto.png');
+    /*Define a imagem do fundo como uma gradiente de preto a petro claro e uma imagem de capa*/
+    height: 700px;
+    background-size: cover;
+    padding: 200px 650px 0px 10px;
+    background-position: center;
+}
+
+.txtbanner {
+    max-width: 700px;
+    margin: 0 auto;
+
+}
+
+.txtbanner p {
+    color: rgb(240, 227, 241);
+    /*Define a cor*/
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    /*Adiciona um espaçamento de 1rem embaixo do paragrafo*/
+    font-weight: 500;
+}
+
+.txtbanner h2 {
+    color: rgb(46, 4, 51);
+    /*Define a cor*/
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.branco {
+    color: rgb(0, 0, 0);
+}
+
+.txtbanner a {
+    margin-top: 2rem;
+    /*Adiciona um espaçamento de 2rem em cima do link*/
+    text-decoration: none;
+    /*Remover a formatação de sublinhado dos links*/
+    color: black;
+    background-color: white;
+    display: inline-block;
+    /*Define o layout do link como branco*/
+    padding: 1rem 3rem;
+    /*Adiciona um espaçamento de 1rem em cima e 3rem a esquerda e a direita do link*/
+    border-radius: 3rem;
+    /*Definir a borda do link como um arredondamento de */
+
+}
+
+/*******************************************/
+/*        CONTEUDO DO MAIN PRINCIPAL       */
+/*******************************************/
+
+
+.main-conteudo {
+    background-color: rgb(177, 108, 178)
+}
+
+/*******************************************/
+/*                  TAGS                   */
+/*******************************************/
+.align {
+    margin: 0px 0px 0px 190px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    padding: 3rem 0;
+}
+
+.base-conteudo {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    /*Define um modelo de grade de 4 colunas de largura igual usando grid-template-colums*/
+    gap: 3rem;
+    /*Adiciona um espaço de 3rem entre as celulas de grade usando espaço*/
+    padding: 3rem 0;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    border-radius: 1rem;
+    gap: 1.5rem;
+    width: 250px;
+    background-color: white;
+    padding: 1.0rem 0;
+    box-shadow: 10px 5px 5px rgb(19, 19, 19);
+}
+
+.conteudo {
+    display: flex;
+    flex-direction: column;
+    /*Define a direção para a coluna usando flex-direction*/
+    gap: 0.5rem;
+}
+
+.conteudo span {
+    font-weight: 700;
+    /*Define o peso da fonte para 700 usando font-weight*/
+    font-size: 1.2rem;
+    color: rgb(218, 90, 184);
+
+}
+
+.conteudo p {
+    color: #e44eda;
+    font-weight: 400;
+}
+
+/*******************************************/
+/*                 SOBRE                   */
+/*******************************************/
+
+.titulosobre {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: black;
+
+}
+
+.just {
+    display: flex;
+    justify-items: center;
+    padding: 50px 150px 50px 150px;
+}
+
+.texto {
+    font-size: 14px;
+    text-align: justify;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    color: white;
+    background-color: #fee497;
+    padding-left: 3rem;
+    border-radius: 1rem;
+}
+
+.marromzinho {
+    background-color: #c971b4;
+    padding: 45px;
+    border-radius: 3rem;
+}
+
+/*******************************************/
+/*                DESTAQUES                */
+/*******************************************/
+
+.container-categoria {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+
+.card-categoria {
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+    gap: 1rem;
+
+
+}
+
+.categoria-moca {
+    background-image: linear-gradient(#00000080, #00000000), url('images/cafemoca.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+
+}
+
+.categoria-americano {
+    background-image: linear-gradient(#00000000, #00000000), url('images/expressoamericano.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+}
+
+.categoria-cappuccino {
+    background-image: linear-gradient(#00000000, #00000000), url('images/capuchino.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+}
+
+.linha {
+    border-bottom: 6px solid #fee497;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #ea7fbf;
+    text-align: center;
+}
+
+.linha2 {
+    border-bottom: 6px solid #fee497;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #ea7fbf;
+    text-align: center;
+    width: 1519px;
+    /* margin-right: -800px; */
+    margin-top: 30px;
+}
+
+
+
+.linhaa {
+    border-bottom: 6px solid #1e170f;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    background-color: #faade8;
+    text-align: center;
+}
+
+.categoria-bruscheta {
+    background-image: linear-gradient(#00000000, #00000000), url('images/bruschetadepresuntoparma.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+
+}
+
+.categoria-croassant {
+    background-image: linear-gradient(#00000000, #00000000), url('images/croasaint.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+    padding-left: 3rem;
+}
+
+
+.categoria-boloRed {
+    background-image: linear-gradient(#00000000, #00000000), url('images/boloredvelvet.jpg');
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 350px;
+    padding-left: 3rem;
+}
+
+p {
+    color: #000000;
+}
+
+.tipo {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+}
+
+.card-categoria p {
+    font-size: 2.5rem;
+    color: rgb(58, 92, 58);
+    text-transform: capitalize;
+    /*Coloca em maiusculo a primeira letra de cada palavra no texto*/
+    position: relative;
+    /*Define a posição dos <p> elementos como relativa, o que nos permite posicionar o pseudoelemento ::after de forma absoluta*/
+
+}
+
+.card-categoria p::after {
+    content: '';
+    /*Define o conteudo do pseudoelemento como uma string vazia, necessária para criar o pseudoelemento*/
+    width: 5.5rem;
+    height: 2px;
+    background-color: rgb(58, 92, 58);
+    position: absolute;
+    /*Define a posição do pseudoelemento como absoluta, o que nos permite posiciona-lo em relação ao seu elemento pai*/
+    bottom: -1rem;
+    left: 50%;
+    transform: translate(-50%, 50%);
+}
+
+.card-categoria span {
+    font-size: 1.6rem;
+    color: white;
+    cursor: pointer;
+    /*Define o formato do cursor como uma mão apontando ao passar o mouse sobre os <span> elementos*/
+}
+
+.card-categoria span:hover {
+    color: white;
+}
+
+/*******************************************/
+/*            MELHORES PRODUTOS            */
+/*******************************************/
+
+.top-products {
+    display: flex;
+    /*Definir um layout flexivel*/
+    flex-direction: column;
+    /*Direção dos itens é vertical(coluna)*/
+    gap: 2rem;
+    /*Espaçamento entre os elementos filhos*/
+    margin-bottom: 3rem;
+    /*Margem inferior*/
+}
+
+
+
+.container-options {
+    display: flex;
+    /*Define um layout flexível*/
+    justify-content: center;
+    /*Centralizar os elementos ao longo do elemento do eixo principal*/
+    gap: 2rem;
+    /*Espacamento entre os elementos filhos*/
+    margin-bottom: 1rem;
+    /*Margem inferior*/
+    margin: 0px 0px 0px 800px;
+}
+
+.container-options span {
+    align-items: center;
+    justify-items: center;
+    color: #777;
+    /*Cor do texto*/
+    background-color: #fff;
+    /*Cor de fundo*/
+    padding: 0.2rem 3rem;
+    /*Espaçamento interno com 0.7 na parte superior e inferior na direita e na esquerda*/
+    font-size: 1.4rem;
+    /*Tamanho da fonte*/
+    text-transform: capitalize;
+    /*Capitaliza o primeiro caractere de cada palavra do texto*/
+    border-radius: 2rem;
+    /*Arredonda as bordas*/
+    cursor: pointer;
+    /*Muda o cursor para indicar que é clicavel*/
+
+}
+
+.container-options span:hover {
+    background-color: #f7d06c;
+    color: #fff;
+}
+
+.container-options span.active {
+    background-color: #f7d06c;
+    color: #fff;
+}
+
+/********************PRODUTOS**********************/
+
+.heading-1 {
+    text-align: center;
+    font-weight: 500;
+    font-size: 3rem;
+    color: white;
+}
+
+.container-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*Mantem 4 colunas em 1 linha*/
+    gap: 2rem;
+    /*Diminiur o espago r´esss*/
+    margin: 0px 0px 0px 0px;
+}
+
+.titulo-produtos {
+    font-size: 40px;
+    margin: 500px 0px 0px 800px;
+}
+
+.card-produtos {
+    background-color: #f7d06c;
+    padding: 1.5rem 1rem;
+    /*Diminiuir o padding para ajudatar o tamanho*/
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 2px rgb(0 0 0 0.1);
+    width: 95%;
+}
+
+.container-img {
+    position: relative;
+
+}
+
+.container-img img {
+    width: 100%;
+}
+
+.container-img .discount {
+    position: absolute;
+    left: 0;
+    background-color: #f586e4;
+    color: #000000;
+    padding: 2px 1.2rem;
+    border-radius: 1rem;
+    font-size: 1.2rem;
+}
+
+.card-product:hover .discount {
+    background-color: #000;
+}
+
+/************************************ANIMAÇÂO BOTÂO*************************************/
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: absolute;
+    /*Posição absoluta para posicionamento especifico*/
+    top: 0;
+    /*Deixa alinhamento no topo*/
+    right: -1rem;
+    /*Alinhamento a direita*/
+    z-index: -6;
+    /*Define a sobreposição inicial*/
+    transition: all 0.5s ease;
+    /*Animação de transição suave*/
+}
+
+.button-group span {
+    border: 1px solid #f586e4;
+    padding: 0.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+}
+
+.button-group span:hover {
+    background-color: #f586e4;
+}
+
+.button-group span i {
+    font-size: 1.5rem;
+    color: #f586e4;
+
+}
+
+.button-group span:hover i {
+    color: #ebd740;
+}
+
+.card-produtos:hover .button-group {
+    z-index: 0;
+    right: -1rem;
+}
+
+.recomen {
+    text-align: center;
+}
+
+.divBusca {
+    background-color: #f586e4;
+    border: solid 1px;
+    border-radius: 15px;
+    width: 220px;
+}
+
+.txtBusca {
+    float: left;
+    background-color: transparent;
+    padding-left: 5px;
+    font-style: italic;
+    font-size: 18px;
+    border: none;
+    height: 32px;
+    width: 240px;
+}
+
+.marronzin {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    background-color: #978f8d;
+}
+
+.center {
+    text-align: center;
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.cor {
+    background-color: #f586e4;
+}
+
+.dois {
+    background-color: #fee497;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-slider {
+    display: flex;
+    width: 100%;
+    min-height: 10vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+
+
+.slider {
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.on {
+    opacity: 1;
+}
+
+.containers {
+    display: flex;
+    width: 200px;
+    text-align: center;
+    border: #398adb;
+
+}
+
+.cards {
+    height: 200px;
+    flex: 1;
+    transition: .7s;
+    cursor: pointer;
+    border: 50px solid color #14a0bf;
+}
+
+.cards:hover {
+    flex: 5;
+}
+
+.cards img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.espacar {
+    gap: 20px;
+}
+
+.margem {
+    text-align: center;
+
+}
+
+.verao {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.verao img {
+    filter: drop-shadow(1px 1px 30px #ffd226);
+}
+
+.container2 {
+    position: relative;
+    display: flex;
+    width: 900px;
+    margin: 0px 0px 0px 300px;
+
+}
+
+
+
+.card2 {
+    height: 400px;
+    flex: 1;
+    transition: .7s;
+}
+
+.card2:hover {
+    flex: 3;
+}
+
+.card2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo img {
+    filter: drop-shadow(10px 10px 20px rgba(244, 227, 45, 9.9));
+}
+
+.VU {
+    filter: drop-shadow(10px 10px 20px rgba(244, 227, 45, 9.9));
+}
+
+
+/*****************************************COMEÇA O CARROSEL DE IMAGENS******************************************************/
+.carousel-wrapper {
+    height: 810px;
+    position: relative;
+    width: 1519px;
+    display: block;
+    margin: 0px;
+    border: 2px solid black;
+}
+
+.carousel-item {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 25px 50px;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 12px;
+}
+
+.arrow-prev {
+    left: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(135deg);
+
+}
+
+.arrow-next {
+    right: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+[id^="item"] {
+    display: none;
+}
+
+.item-1 {
+    z-index: 2;
+    opacity: 1;
+    background: url('um.png');
+    background-size: cover;
+}
+
+.item-2 {
+    background: url('dois.png');
+    background-size: cover;
+}
+
+.item-3 {
+    background: url('tres.png');
+    background-size: cover;
+}
+
+.item-4 {
+    background: url('quatro.png');
+    background-size: cover;
+}
+
+*:target~.item-1 {
+    opacity: 0;
+}
+
+#item-1:target~.item-1 {
+    opacity: 1;
+
+}
+
+#item-2:target~.item-2,
+#item-3:target~.item-3,
+#item-4:target~.item-4 {
+    z-index: 3;
+    opacity: 1;
+}
+
+
+
+
+.produto {
+    background-color: #fee497;
+    border-bottom: 20px;
+    border-radius: 20px;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+
+
+}
+
+
+
+.produto:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+}
+
+
+.imagem {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+.imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    border: 20px dotted solid rgb(255, 255, 255);
+}
+
+
+button {
+    background-color: #ea7fbf;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #ea7fbf;
+}
+
+
+.informação {
+    padding: 15px;
+}
+
+.informação h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.informação p {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.informação h4 {
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #ea7fbf;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e2e95a;
+}
+
+
+.fundo-branco2 {
+    background-color: #faade8;
+
+
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    padding: 20px;
+    gap: 3rem;
+}
+
+
+
+
+.imagem {
+    position: relative;
+}
+
+.imagem img {
+    width: 100%;
+
+}
+
+.icones {
+    margin: -280px 400px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+    /*posição absoluta para posicionamento especifico*/
+    right: -3rem;
+    /*alinhamento a direita*/
+    transition: all 0.4s ease;
+    /*animação de transição suave*/
+
+
+    z-index: -1;
+    /*define a sobreposição inicial */
+    transition: all 0.4s ease;
+    /*animação de transição suave*/
+
+
+}
+
+.icones span {
+    border: 1px solid #ff6b6b;
+    padding: 0.8rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    background-color: #e196cf;
+    cursor: pointer;
+    transition: all 0.4s ease;
+
+
+
+}
+
+.icones span:hover {
+    background-color: #da9cdd;
+}
+
+.icones span i {
+    font-size: 1.5rem;
+    color: #a731ad;
+}
+
+.icones span:hover i {
+    color: #fff;
+}
+
+.produto:hover .icones {
+    z-index: 0;
+    right: -1rem;
+
+}
+
+.centro {
+    margin: 0px 50px 0px 0px;
+}
+
+.cortado {
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-decoration: line-through;
+    /*Aplica um risco sobre o preço*/
+    color: #000000;
+}
+
+.local {
+    display: flex;
+    gap: 2rem;
+    padding-top: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+
+}
+
+form {
+    width: 100%;
+    /*Define a largura do formulario como 100%*/
+    max-width: 400px;
+    /*Define a largura maxima do formulario*/
+    flex-direction: column;
+    /*Define a direção do formulario como coluna*/
+    gap: 1rem;
+    background-color: #fff;
+    border-radius: 20px;
+
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    margin-left: 400px;
+
+    
+}
+
+.blogs {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.container-blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin: 200px;
+}
+
+.card-blog {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 40px 20px 40px 20px;
+    padding: 20px 30px 60px 30px;
+    background-color: #ffffff;
+    border-radius: 30px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card-blog .container-img {
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    /*Oculta o conetudo que excede o container*/
+
+}
+
+.container-img {
+    border-radius: 10px;
+
+}
+
+.button-group-blog {
+    position: absolute;
+    /*Define a posicao absoluta do grupo de botoes*/
+    bottom: 1.2rem;
+    right: -2.5rem;
+    /*Inicialmente posiciona o grupo de botoes a direira, fora da tela*/
+    display: flex;
+    gap: 0.7rem;
+    z-index: -1;
+    /*Coloca o grupo de botões atrás do conteudo*/
+    transition: all 0.3s ease;
+    /*Adiciona uma transicao suave de 0.3 s para o movimento*/
+}
+
+.card-blog:hover .button-group-blog {
+    z-index: 0;
+    /*Quando o cartao e´sobreposto, traz o grupo de botoes para frente*/
+    right: 1.5rem;
+    /*Move o grupo de botoes para a posiçaõ vísivel a direita*/
+}
+
+.button-group-blog span {
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-group-blog span:hover {
+    color: #ffffff;
+}
+
+.button-group-blog span:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.content-blog h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    color: #ec7bef;
+    font-weight: 400;
+}
+
+.content-blog h3:hover {
+    color: #df91e1;
+    cursor: pointer;
+}
+
+.content-blog p {
+    margin-top: 1rem;
+    font-size: 1.4rem;
+    color: #777;
+}
+
+.content-blog span {
+    color: #c7a17a;
+    font-size: 1.3rem;
+
+}
+
+.btn-read-more {
+    padding: 1rem 3rem;
+    background-color: #e0e253;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-radius: 2rem;
+    margin: 2rem 0 5rem;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.btn-read-more:hover {
+    background-color: rgb(228, 154, 226);
+
+}
+
+/* ********************************** */
+/*               FOOTER               */
+/* ********************************** */
+
+.footer {
+	background-color: #e2e47f;
+}
+
+.container-footer {
+	display: flex;
+	flex-direction: column;
+	gap: 4rem;
+	padding: 3rem;
+	background-color: #eef392;
+}
+
+.menu-footer {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr) 30rem;
+	gap: 3rem;
+	justify-items: center;
+}
+
+.title-footer {
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-transform: uppercase;
+}
+
+.contact-info,
+.information,
+.my-account,
+.newsletter {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.contact-info ul,
+.information ul,
+.my-account ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.contact-info ul li,
+.information ul li,
+.my-account ul li {
+	list-style: none;
+	color: #000000;
+	font-size: 0.9rem;
+	font-weight: 300;
+}
+
+.information ul li a,
+.my-account ul li a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: 300;
+}
+
+.information ul li a:hover,
+.my-account ul li a:hover {
+	color: black;
+}
+
+.social-icons {
+	display: flex;
+	gap: 1.5rem;
+}
+
+.social-icons span {
+	border-radius: 50%;
+	width: 3rem;
+	height: 3rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.social-icons span i {
+	color: #000000;
+	font-size: 1.4rem;
+}
+
+.facebook {
+	background-color: #3b5998;
+}
+
+.twitter {
+	background-color: #00acee;
+}
+
+.youtube {
+	background-color: #c4302b;
+}
+
+.pinterest {
+	background-color: #c8232c;
+}
+
+.instagram {
+	background: linear-gradient(
+		#405de6,
+		#833ab4,
+		#c13584,
+		#e1306c,
+		#fd1d1d,
+		#f56040,
+		#fcaf45
+	);
+}
+
+.content p {
+	font-size: 0.8rem;
+	color: #000000;
+	font-weight: 300;
+}
+
+.content input {
+	outline: none;
+	background: none;
+	border: none;
+	border-bottom: 2px solid #d2b495;
+	cursor: pointer;
+	padding: 0.5rem 0 1.2rem;
+	color: black;
+	display: block;
+	margin-bottom: 3rem;
+	margin-top: 2rem;
+	width: 100%;
+	font-family: inherit;
+}
+
+.content input::-webkit-input-placeholder {
+	color: #000000;
+}
+
+.content button {
+	border: none;
+	background-color: #e871e2;
+	color: #000000;
+	text-transform: uppercase;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	font-size: 0.9rem;
+	font-family: inherit;
+	cursor: pointer;
+	font-weight: 400;
+}
+
+.content button:hover {
+	background-color:#dfff52;
+	color: rgb(241, 112, 215);
+}
+
+.copyright {
+	display: flex;
+	justify-content: space-between;
+	padding-top: 2rem;
+	border-top: 1px solid #d2b495;
+	justify-content: center;
+	align-items: center;
+}
+
+.copyright p {
+	font-weight: 400;
+	font-size: 1.1rem;
+}
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 768px       */
+/* ********************************** */
+@media (max-width: 768px) {
+	html {
+		font-size: 55%;
+	}
+
+	.hero {
+		padding: 2rem;
+	}
+
+	.customer-support {
+		display: none;
+	}
+
+	.content-shopping-cart {
+		display: none;
+	}
+
+	.navbar {
+		padding: 1rem 2rem;
+	}
+
+	.navbar .fa-bars {
+		display: block;
+		color: #000000;
+		font-size: 3rem;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		margin: 0 auto;
+		padding: 25rem 0;
+	}
+
+	.container-features {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 3rem 2rem;
+	}
+
+	.card-feature {
+		padding: 2rem;
+	}
+
+	.heading-1 {
+		font-size: 2.4rem;
+	}
+
+	.card-category {
+		height: 12rem;
+	}
+
+	.card-category p {
+		font-size: 2rem;
+		text-align: center;
+		line-height: 1;
+	}
+
+	.card-category span {
+		font-size: 1.4rem;
+	}
+
+	.container-options {
+		align-items: center;
+	}
+
+	.container-options span {
+		text-align: center;
+		padding: 1rem 2rem;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 15rem);
+	}
+
+	.container-blogs {
+		overflow: hidden;
+		grid-template-columns: 1fr 1fr;
+
+		height: 52rem;
+	}
+
+	.menu-footer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.copyright {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 1.5rem;
+	}
+}
+
+
+/* ********************************** */
+/*       MEDIA QUERIES -- 468px       */
+/* ********************************** */
+@media (max-width: 468px) {
+	html {
+		font-size: 42.5%;
+	}
+
+	.content-banner {
+		max-width: 50rem;
+		padding: 22rem 0;
+	}
+
+	.heading-1 {
+		font-size: 2.8rem;
+	}
+
+	.card-feature {
+		flex-direction: column;
+		border-radius: 2rem;
+	}
+
+	.feature-content {
+		align-items: center;
+	}
+
+	.feature-content p {
+		font-size: 1.4rem;
+		text-align: center;
+	}
+
+	.feature-content span {
+		font-size: 1.6rem;
+		text-align: center;
+	}
+
+	.container-options span {
+		font-size: 1.8rem;
+		padding: 1rem 1.5rem;
+		font-weight: 500;
+	}
+
+	.container-products {
+		grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+		gap: 1rem;
+	}
+
+	.container-img .discount {
+		font-size: 2rem;
+	}
+
+	.content-card-product h3 {
+		font-size: 2.2rem;
+	}
+
+	.gallery {
+		grid-template-rows: repeat(2, 20rem);
+	}
+
+	.blogs {
+		padding: 2rem;
+	}
+
+	.container-blogs {
+		grid-template-columns: 1fr;
+		height: 75rem;
+	}
+
+	.content-blog h3 {
+		font-size: 2.4rem;
+	}
+
+	.content-blog span {
+		font-size: 1.8rem;
+	}
+
+	.content-blog p {
+		font-size: 2.2rem;
+	}
+
+	.btn-read-more{
+		font-size: 1.8rem;
+	}
+
+	.contact-info ul,
+	.information ul,
+	.my-account ul{
+		display: none;
+	}
+
+	.contact-info {
+		align-items: center;
+	}
+
+	.menu-footer{
+		grid-template-columns: 1fr;
+	}
+
+	.content p{
+		font-size: 1.6rem;
+	}
+}
